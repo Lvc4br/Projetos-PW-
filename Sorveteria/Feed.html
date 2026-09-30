@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="author" content="Luca Toniolo">
+    <meta name="author" content="Bianca Oliveira">
+    <meta name="author" content="Fred ">
+
+    <meta name="keywords" content="Sorveteria, Sorvetes, Açaís, Milkshakes, Casquinhas, Sundaes, Banana Split">
+    <meta name="description" content="Site de uma sorveteria">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="imgs/Logo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/Global.css">
+    <link rel="stylesheet" href="./CSS/Funcionalidades.css">
+    <link rel="stylesheet" href="./CSS/Feed.css">
+    <title>Feed — Ice Cream Panda</title>
+</head>
+<body>
+    <header class="topo">
+        <nav class="nav-inner">
+            <div class="logo">
+                <a href="./index.html#"><img src="imgs/icones_sorveteria_separados/Logo1.png" alt="Logo Site"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="./Sobre.html">Sobre</a></li>
+                <li><a href="./Cardapio.html">Cardápio</a></li>
+                <li><a href="./index.html#Avaliacao">Avaliação</a></li>
+                <li><a href="#Feed">Feed</a></li>
+                <li><a href="./index.html#Contato">Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main class="feed-page">
+        <div class="feed-layout">
+            <aside class="feed-sidebar" aria-label="Informações da página">
+                <section class="feed-profile">
+                    <img class="feed-profile__avatar" src="./imgs/icones_sorveteria_separados/Logo1.png" alt="">
+                    <div>
+                        <h1>Ice Cream Panda</h1>
+                        <p>Um cantinho para compartilhar novidades e momentos gelados.</p>
+                    </div>
+                    <a class="feed-profile__link" href="./Sobre.html">Conheça nossa história</a>
+                    <a class="feed-profile__link" href="./Cardapio.html">Ver o cardápio</a>
+                </section>
+            </aside>
+
+            <section class="feed-stream" aria-label="Publicações da sorveteria">
+                <form class="feed-composer" id="feed-composer">
+                    <label for="feed-message">Compartilhe uma novidade</label>
+                    <textarea id="feed-message" name="message" rows="3" placeholder="Escreva uma mensagem para a comunidade..." required></textarea>
+                    <div class="feed-composer__footer">
+                        <p>As publicações desta demonstração ficam somente nesta página.</p>
+                        <button class="feed-button feed-button--primary" type="submit">Publicar</button>
+                    </div>
+                    <p class="feed-composer__status" role="status" aria-live="polite" hidden></p>
+                </form>
+
+                <div class="feed-posts" id="feed-posts" aria-live="polite">
+                    <article class="feed-post">
+                        <header class="feed-post__header">
+                            <img src="./imgs/icones_sorveteria_separados/Logo1.png" alt="" class="feed-post__avatar">
+                            <div>
+                                <h2>Ice Cream Panda</h2>
+                                <p>Novidade da sorveteria</p>
+                            </div>
+                        </header>
+                        <p class="feed-post__text">Feito com carinho e sem pressa: nossos sorvetes são preparados em pequenos lotes, com frutas de verdade. Qual sabor combina com o seu dia?</p>
+                        <img class="feed-post__image" src="./imgs/imgs/casquinha.jpg" alt="Casquinha de sorvete com cobertura de chocolate">
+                        <div class="feed-post__summary"><span data-like-count>0 curtidas</span><span data-comment-count>Participe da conversa</span></div>
+                        <div class="feed-post__actions">
+                            <button class="feed-action" type="button" data-like aria-pressed="false">Curtir</button>
+                            <button class="feed-action" type="button" data-toggle-comments>Comentar</button>
+                        </div>
+                        <form class="feed-comment-form" data-comment-form hidden>
+                            <label class="visually-hidden" for="comment-one">Escreva um comentário</label>
+                            <input id="comment-one" name="comment" type="text" placeholder="Escreva um comentário..." required>
+                            <button class="feed-button" type="submit">Enviar</button>
+                        </form>
+                        <div class="feed-comments" data-comments></div>
+                    </article>
+
+                    <article class="feed-post">
+                        <header class="feed-post__header">
+                            <img src="./imgs/icones_sorveteria_separados/Logo1.png" alt="" class="feed-post__avatar">
+                            <div>
+                                <h2>Ice Cream Panda</h2>
+                                <p>Um pouco sobre nossos produtos</p>
+                            </div>
+                        </header>
+                        <p class="feed-post__text">Da casquinha crocante ao milk-shake cremoso, temos opções para diferentes vontades. Consulte o cardápio e fale com a gente para saber os sabores disponíveis.</p>
+                        <a class="feed-post__link" href="./Cardapio.html">Explorar o cardápio <span aria-hidden="true">→</span></a>
+                        <div class="feed-post__summary"><span data-like-count>0 curtidas</span><span data-comment-count>Participe da conversa</span></div>
+                        <div class="feed-post__actions">
+                            <button class="feed-action" type="button" data-like aria-pressed="false">Curtir</button>
+                            <button class="feed-action" type="button" data-toggle-comments>Comentar</button>
+                        </div>
+                        <form class="feed-comment-form" data-comment-form hidden>
+                            <label class="visually-hidden" for="comment-two">Escreva um comentário</label>
+                            <input id="comment-two" name="comment" type="text" placeholder="Escreva um comentário..." required>
+                            <button class="feed-button" type="submit">Enviar</button>
+                        </form>
+                        <div class="feed-comments" data-comments></div>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="feed-sidebar feed-sidebar--right" aria-label="Sobre esta página">
+                <section class="feed-note">
+                    <h2>Sobre o feed</h2>
+                    <p>Um espaço demonstrativo para novidades da Ice Cream Panda. As curtidas e os comentários são locais e não são enviados a um servidor.</p>
+                </section>
+            </aside>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Sobre -->
+            <div class="footer-about" >
+                <h3>Sobre nós</h3>
+                <p>
+                    Sorvetes artesanais preparados com carinho,
+                    ingredientes selecionados e sabores especiais
+                    para deixar seus momentos ainda mais gostosos.
+                </p>
+            </div>
+            <!-- Contato -->
+            <div class="footer-contact" >
+                <h3>Contato</h3>
+                <address>
+                    <p>
+                        <strong>Endereço:</strong><br>
+                        Rua Exemplo, 123 — São Paulo, SP
+                    </p>
+                    <p>
+                        <strong>Telefone:</strong><br>
+                        <a href="tel:+5511999999999">
+                            (11) 99999-9999
+                        </a>
+                    </p>
+                    <p>
+                        <strong>E-mail:</strong><br>
+                        <a href="mailto:contato@sorveteria.com">
+                            contato@sorveteria.com
+                        </a>
+                    </p>
+                </address>
+            </div>
+            <!-- Redes sociais -->
+            <div class="footer-social" >
+                <h3>Siga-nos</h3>
+                <p>
+                    Acompanhe nossas novidades e sabores especiais.
+                </p>
+                <div class="icons">
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Parte inferior -->
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Sorveteria. Todos os direitos reservados.
+            </p>
+            <p>
+                Desenvolvido por Luca, Bianca, Fred.
+            </p>
+        </div>
+    </footer>
+    <script src="js/App.js"></script>
+    <script src="js/Feed.js"></script>
+</body>
+</html>
