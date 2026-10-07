@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="author" content="Luca Toniolo">
+    <meta name="author" content="Bianca Oliveira">
+    <meta name="author" content="Fred ">
+
+    <meta name="description" content="Explore o cardápio da Ice Cream Panda: casquinhas, milk-shakes de vários sabores, sundaes, açaí e banana split.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="imgs/imgs/logo_sorveteria.png" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/Global.css">
+    <link rel="stylesheet" href="./CSS/Funcionalidades.css">
+    <link rel="stylesheet" href="./CSS/slide.css">
+    <script src="./js/ProductModal.js" defer></script>
+    <title>Cardápio | Sorvetes, açaí e milk-shakes — Ice Cream Panda</title>
+</head>
+<body>
+    <header class="topo">
+        <nav class="nav-inner">
+            <div class="logo">
+                <a href="./index.html#"><img src="imgs/imgs/Logo1.png" alt="Logo Site"></a>
+            </div>
+            <ul class="menu" id="menu-principal">
+                <li><a href="./Sobre.html">Sobre</a></li>
+                <li><a href="#Cardapio">Cardápio</a></li>
+                <li><a href="./index.html#Avaliacao">Avaliação</a></li>
+                <li><a href="./Feed.html">Feed</a></li>
+                <li><a href="./index.html#Contato">Contato</a></li>
+            </ul>
+            <button class="menu-hamburguer" type="button" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+                <img src="imgs/Burguer/burgue.png" alt="Menu">
+            </button>
+        </nav>
+
+    </header>
+
+    <section class="slider menu-hero" id="home" aria-label="Produtos em destaque">
+        <div class="list">
+            <article class="item active" aria-hidden="false">
+                <img class="banner-bg" src="./imgs/imgs/thumbnail.jpeg" alt="Casquinha de sorvete" aria-hidden="true">
+                <img class="product-visual" src="./imgs/imgs/thumbnail.jpeg" alt="Casquinha de sorvete">
+                <div class="content">
+                    <p class="product-eyebrow">FEITO COM CARINHO</p>
+                    <h1>Casquinha</h1>
+                    <p>Uma casquinha crocante com o sabor de sorvete que você escolher.</p>
+                    <p class="product-price">R$ 10,00</p>
+                    <a class="btn btn-filled" href="./index.html#Contato">Consulte os sabores</a>
+                </div>
+            </article>
+            <article class="item" aria-hidden="true">
+                <img class="banner-bg" src="./imgs/imgs/Milkshake_Strawberry.png" alt="Milk-shake de morango" aria-hidden="true">
+                <img class="product-visual" src="./imgs/imgs/Milkshake_Strawberry.png" alt="Milk-shake de morango com chantilly">
+                <div class="content">
+                    <p class="product-eyebrow">GELADO E CREMOSO</p>
+                    <h1>Milk-shake</h1>
+                    <p>Uma bebida cremosa para curtir bem gelada, no seu sabor favorito.</p>
+                    <p class="product-price">R$ 10,00</p>
+                    <a class="btn btn-filled" href="./index.html#Contato">Consulte os sabores</a>
+                </div>
+            </article>
+            <article class="item" aria-hidden="true">
+                <img class="banner-bg" src="./imgs/imgs/açai_copo.jpeg" alt="Açaí com kiwi" aria-hidden="true">
+                <img class="product-visual" src="./imgs/imgs/açai_copo.jpeg" alt="Açaí com kiwi">
+                <div class="content">
+                    <p class="product-eyebrow">SEU MOMENTO REFRESCANTE</p>
+                    <h1>Açaí</h1>
+                    <p>Uma opção refrescante para combinar com os acompanhamentos da house.</p>
+                    <p class="product-price">R$ 10,00</p>
+                    <a class="btn btn-filled" href="./index.html#Contato">Consulte os acompanhamentos</a>
+                </div>
+            </article>
+            <article class="item" aria-hidden="true">
+                <img class="banner-bg" src="./imgs/imgs/sundae-chocolate.png" alt="Sundae de chocolate" aria-hidden="true">
+                <img class="product-visual" src="./imgs/imgs/sundae-chocolate.png" alt="Sundae de chocolate com cereja, biscoito e calda">
+                <div class="content">
+                    <p class="product-eyebrow">SEU MOMENTO REFRESCANTE</p>
+                    <h1>Sundae</h1>
+                    <p>Uma opção refrescante para combinar com os acompanhamentos da house.</p>
+                    <p class="product-price">R$ 10,00</p>
+                    <a class="btn btn-filled" href="./index.html#Contato">Consulte os acompanhamentos</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="arrows" aria-label="Controles do carrossel">
+            <button class="prev" type="button" aria-label="Produto anterior">&lt;</button>
+            <button class="next" type="button" aria-label="Próximo produto">&gt;</button>
+        </div>
+
+        <div class="thumbnail" role="group" aria-label="Escolha um produto">
+            <button class="item active" type="button" aria-label="Mostrar Casquinha" aria-current="true">
+                <img src="./imgs/imgs/thumbnail.jpeg" alt="">
+                <span class="content">Casquinha</span>
+            </button>
+            <button class="item" type="button" aria-label="Mostrar Milk-shake" aria-current="false">
+                <img src="./imgs/imgs/Milkshake_Strawberry" alt="Milk-shake de morango">
+                <span class="content">Milk-shake</span>
+            </button>
+            <button class="item" type="button" aria-label="Mostrar Açaí" aria-current="false">
+                <img src="./imgs/imgs/açai_copo.jpeg" alt="Açaí com kiwi">
+                <span class="content">Açaí</span>
+            </button>
+            <button class="item" type="button" aria-label="Mostrar Sundae" aria-current="false">
+                <img src="./imgs/imgs/sundae-chocolate.png" alt="Sundae de chocolate">
+                <span class="content">Sundae</span>
+            </button>
+        </div>
+    </section>
+    <main>
+
+        <section class="menu-section" id="opcoes" aria-labelledby="menu-title">
+            <div class="menu-intro">
+                <h2 id="menu-title">Escolha seu favorito</h2>
+                <p>Confira algumas das opções da house. Consulte os sabores disponíveis no atendimento.</p>
+            </div>
+
+            <div class="filter-buttons">
+                <button type="button" data-filter="all" class="active" aria-pressed="true">Todos</button>
+                <button type="button" data-filter="casquinha" aria-pressed="false">Casquinha</button>
+                <button type="button" data-filter="milkshake" aria-pressed="false">Milk-shake</button>
+                <button type="button" data-filter="sundae" aria-pressed="false">Sundae</button>
+                <button type="button" data-filter="açai" aria-pressed="false">Açaí</button>
+                <button type="button" data-filter="banana-split" aria-pressed="false">Banana Split</button>
+            </div>
+
+            <div class="menu-options">
+
+                <article class="menu-option" data-category="casquinha">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/Sorvete_Baunilha" alt="Casquinha com sorvete de baunilha">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">BAUNILHA</p>
+                            <h3>Casquinha de baunilha</h3>
+                            <p>Sorvete de baunilha suave servido em uma casquinha crocante.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="casquinha">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/Sorvete_Chocolate" alt="Casquinha com sorvete de chocolate">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">CHOCOLATE</p>
+                            <h3>Casquinha de chocolate</h3>
+                            <p>Chocolate cremoso na medida certa, servido em casquinha crocante.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="casquinha">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/Sorvete_Misto" alt="Casquinha com sorvete de baunilha e chocolate">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">DOIS SABORES</p>
+                            <h3>Casquinha mista</h3>
+                            <p>Baunilha e chocolate se encontram em uma combinação clássica.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="casquinha">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/Sorvete_Morango" alt="Casquinha com sorvete de morango">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">MORANGO</p>
+                            <h3>Casquinha de morango</h3>
+                            <p>O sabor frutado do morango em uma casquinha crocante.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Milkshake -->
+                <article class="menu-option" data-category="milkshake">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/milkshake-morango.png" alt="Milk-shake cremoso de morango">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">FRUTADO</p>
+                            <h3>Milk-shake de morango</h3>
+                            <p>Morango e cremosidade em uma bebida gelada para qualquer hora.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="milkshake">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/milkshake-chocolate.png" alt="Milk-shake de chocolate">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">CHOCOLATUDO</p>
+                            <h3>Milk-shake de chocolate</h3>
+                            <p>Chocolate intenso batido até ficar cremoso e bem gelado.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="milkshake">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/milkshake-menta.png" alt="Milk-shake de menta com chocolate">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">REFRESCANTE</p>
+                            <h3>Milk-shake de menta</h3>
+                            <p>Menta refrescante com o toque marcante do chocolate.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="milkshake">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/milkshake-abacaxi.png" alt="Milk-shake de abacaxi">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">TROPICAL</p>
+                            <h3>Milk-shake de abacaxi</h3>
+                            <p>Abacaxi com um perfil tropical em uma mistura cremosa e gelada.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="milkshake">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/milkshake-baunilha.png" alt="Milk-shake de baunilha">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">CLÁSSICO</p>
+                            <h3>Milk-shake de baunilha</h3>
+                            <p>Baunilha suave e textura cremosa em uma receita clássica.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="milkshake">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/milkshake-cafe.png" alt="Milk-shake de café">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">SABOR MARCANTE</p>
+                            <h3>Milk-shake de café</h3>
+                            <p>Café e sorvete em uma combinação cremosa com sabor encorpado.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="milkshake">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/milkshake-coco.png" alt="Milk-shake de coco">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">LEVE E CREMOSO</p>
+                            <h3>Milk-shake de coco</h3>
+                            <p>Coco em uma bebida gelada, cremosa e cheia de sabor.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="milkshake">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/milkshake-kinder-bueno.png" alt="Milk-shake inspirado em Kinder Bueno">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">ESPECIAL</p>
+                            <h3>Milk-shake Kinder Bueno</h3>
+                            <p>Uma mistura cremosa com sabor de chocolate e avelã.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="milkshake" >
+                    <div class="card-content">
+                        <img src="./imgs/imgs/milkshake-oreo.png" alt="Milk-shake com biscoito Oreo">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">COM PEDACINHOS</p>
+                            <h3>Milk-shake de Oreo</h3>
+                            <p>Biscoito Oreo e milk-shake cremoso para uma pausa especial.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sundae -->
+                <article class="menu-option" data-category="sundae">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/sundae-morango.png" alt="Sundae de morango com calda e chantilly">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">FRUTADO</p>
+                            <h3>Sundae de morango</h3>
+                            <p>Sorvete com morango e calda frutada, finalizado com chantilly.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="sundae">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/sundae-chocolate.png" alt="Sundae de chocolate com calda e chantilly">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">CHOCOLATUDO</p>
+                            <h3>Sundae de chocolate</h3>
+                            <p>Camadas de sorvete e calda de chocolate em uma sobremesa caprichada.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="menu-option" data-category="sundae">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/sundae-banana-split.png" alt="Sundae banana split com banana, sorvete e caldas">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">BEM SERVIDO</p>
+                            <h3>Sundae banana split</h3>
+                            <p>Banana, bolas de sorvete e caldas em uma combinação clássica.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="sundae">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/sundae-cookies-and-cream.png" alt="Sundae de cookies and cream com biscoito e calda">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">CROCANTE</p>
+                            <h3>Sundae cookies and cream</h3>
+                            <p>Sorvete com pedaços de biscoito e calda de chocolate.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="sundae">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/sundae-menta-chocolate.png" alt="Sundae de menta com chocolate">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">REFRESCANTE</p>
+                            <h3>Sundae de menta e chocolate</h3>
+                            <p>Menta gelada com chocolate, uma combinação fresca e marcante.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="sundae">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/sundae-baunilha-caramelo.png" alt="Sundae de baunilha com caramelo">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">DOCE NA MEDIDA</p>
+                            <h3>Sundae de baunilha e caramelo</h3>
+                            <p>Baunilha cremosa coberta com caramelo e um toque crocante.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- açai -->
+                <article class="menu-option" data-category="açai">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/açai_copo.jpeg" alt="Açaí cremoso servido no copo">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">PURO AÇAÍ</p>
+                            <h3>Açaí tradicional</h3>
+                            <p>Açaí cremoso servido gelado para aproveitar a qualquer hora.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="açai">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/açai_copo_frutas.jpeg" alt="Açaí no copo com morangos e acompanhamentos">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">COM FRUTAS</p>
+                            <h3>Açaí com morango</h3>
+                            <p>Açaí em camadas com morangos e acompanhamentos crocantes.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="açai">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/Pote.jpeg" alt="Pote de açaí com banana, morango e granola">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">COMPLEMENTOS</p>
+                            <h3>Açaí no pote</h3>
+                            <p>Açaí acompanhado de frutas e granola para combinar texturas.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="açai">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/pote_grande.jpeg" alt="Pote grande de açaí com frutas e granola">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">PARA COMPARTILHAR</p>
+                            <h3>Pote grande de açaí</h3>
+                            <p>Uma porção generosa de açaí com frutas e acompanhamentos.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="açai">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/tamanho_familia.jpeg" alt="Açaí tamanho família com frutas, granola e chocolate">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">TAMANHO FAMÍLIA</p>
+                            <h3>Açaí para compartilhar</h3>
+                            <p>Açaí em porção família com frutas e opções de acompanhamentos.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- banana split -->
+                <article class="menu-option" data-category="banana-split">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/Banana_Split1" alt="Banana split com sorvete, banana e caldas">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">A CLÁSSICA</p>
+                            <h3>Banana Split</h3>
+                            <p>Banana e bolas de sorvete reunidas em uma sobremesa para saborear sem pressa.</p>
+                        
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="banana-split">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/Banana_Split3" alt="Banana split com sorvete e acompanhamentos">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">BEM SERVIDA</p>
+                            <h3>Banana Split</h3>
+                            <p>Uma combinação generosa de banana, sorvete e complementos.</p>
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-option" data-category="banana-split">
+                    <div class="card-content">
+                        <img src="./imgs/imgs/Banana_Split4" alt="Banana split com bolas de sorvete e cobertura">
+                        <div class="hover-layer">
+                            <p class="menu-option__eyebrow">PARA SE DELICIAR</p>
+                            <h3>Banana Split</h3>
+                            <p>Banana, sorvete e cobertura em uma sobremesa clássica e caprichada.</p>
+                            <span class="menu-option__price">R$ 10,00</span>
+                        </div>
+                    </div>
+                </article>
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Sobre -->
+            <div class="footer-about" >
+                <h3>Sobre nós</h3>
+                <p>
+                    Sorvetes artesanais preparados com carinho,
+                    ingredientes selecionados e sabores especiais
+                    para deixar seus momentos ainda mais gostosos.
+                </p>
+            </div>
+            <!-- Contato -->
+            <div class="footer-contact" >
+                <h3>Contato</h3>
+                <address>
+                    <p>
+                        <strong>Endereço:</strong><br>
+                        Rua Exemplo, 123 — São Paulo, SP
+                    </p>
+                    <p>
+                        <strong>Telefone:</strong><br>
+                        <a href="tel:+5511999999999">
+                            (11) 99999-9999
+                        </a>
+                    </p>
+                    <p>
+                        <strong>E-mail:</strong><br>
+                        <a href="mailto:contato@sorveteria.com">
+                            contato@sorveteria.com
+                        </a>
+                    </p>
+                </address>
+            </div>
+            <!-- Redes sociais -->
+            <div class="footer-social" >
+                <h3>Siga-nos</h3>
+                <p>
+                    Acompanhe nossas novidades e sabores especiais.
+                </p>
+                <div class="icons">
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"><img src="https://img.icons8.com/?size=100&amp;id=59813&amp;format=png&amp;color=000000" alt="Instagram"></i>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"><img src="https://img.icons8.com/?size=100&id=118467&format=png&color=000000" alt="Facebook"></i>
+                    </a>
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"><img src="https://img.icons8.com/?size=100&id=16733&format=png&color=000000" alt="WhatsApp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Parte inferior -->
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Sorveteria. Todos os direitos reservados.
+            </p>
+            <p>
+                Desenvolvido por Luca, Bianca, Fred.
+            </p>
+        </div>
+    </footer>
+    <script src="js/App.js"></script>
+    <script src="js/Filter.js"></script>
+</body>
+</html>
